@@ -13,6 +13,9 @@ pipeline {
               }
             },
             'grupo2': {
+                   git 'https://github.com/lalamas2/cerca.git'
+             },
+            'grupo3': {
                 sleep 5
                 error 'Erroren en el procesamiento grupo2'
              },
