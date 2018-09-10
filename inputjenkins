@@ -1,0 +1,23 @@
+def resp = input id: 'ctns-prompt', 
+    message: 'Continuamos al proximo paso?',
+    parameters: [choice(choices: "prueba1\nprueba2\nprueba3\n",
+    description: 'Escoga una opción', 
+    name: 'Escoge una opción : ')]
+    echo "La respuesta ha sido ${resp}"
+    
+node {
+   stage('\u2600 - Descarga source - \u2705')
+   {
+       // Descarga codigo fuente gitlab oesia repositorio terraform
+       
+       git 'https://github.com/lalamas2/cerca.git'
+       
+   }
+
+   stage('\u001B Shell')
+   {
+       sh 'echo esto es una prueba de etapa'
+   }
+   
+   
+}
