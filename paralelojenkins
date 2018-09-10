@@ -7,7 +7,7 @@ pipeline {
             'grupo1': {
               timestamps {
                   catchError {
-                    sleep 10
+                    sleep 15
                     echo 'Completetado procesamiento grupo 1'
                   }
               }
@@ -16,8 +16,8 @@ pipeline {
                    git 'https://github.com/lalamas2/cerca.git'
              },
             'grupo3': {
-                sleep 5
-                error 'Erroren en el procesamiento grupo2'
+                sleep 10
+                error 'Error en en el procesamiento grupo3'
              },
             failFast: true
           )
