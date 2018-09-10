@@ -1,0 +1,24 @@
+pipeline {
+  agent any
+    stages {
+      stage ('Ejecucion en paralelo') {
+        steps {
+          parallel (
+            'grupo1': {
+              timestamps {
+                  catchError {
+                    sleep 10
+                    echo 'Completetado procesamiento grupo 1'
+                  }
+              }
+            },
+            'grupo2': {
+                sleep 5
+                error 'Erroren en el procesamiento grupo2'
+             },
+            failFast: true
+          )
+      }
+    }
+   }
+}
