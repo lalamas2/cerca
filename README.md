@@ -2,6 +2,4 @@
 Vamos a ir subiendo
 hola
 
-adios
-hola
-asas
+
