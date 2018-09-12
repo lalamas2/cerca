@@ -1,3 +1,4 @@
-# Este repositptio es para las prueba cerca
+# Este repositorio es para las prueba cerca
 Vamos a ir subiendo
 hola
+vamos 
