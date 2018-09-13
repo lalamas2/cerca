@@ -2,7 +2,7 @@ pipeline {
     //agent any
     agent {
         // Incluimos un contenedor para ejecutar agente
-        docker { image 'jenkinsci/ssh-slave }
+        docker { image 'jenkinsci/ssh-slave' }
     }
     stages {
         stage('Prueba Despliegue - Ais ') {
