@@ -1,6 +1,6 @@
 pipeline {
     //agent any
-    agent ('Nodo1_docker')
+    agent label ('Nodo1_docker')
     stages {
         stage('Prueba Despliegue - Ais ') {
             steps {
