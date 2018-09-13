@@ -1,7 +1,7 @@
 pipeline {
     //agent any
     agent {
-        docker  { image: 'jenkinsci/ssh-slave'}
+        docker  { image: 'node:9-alpine' }
     }
     stages {
         stage('Prueba Despliegue - Ais ') {
