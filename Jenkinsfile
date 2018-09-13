@@ -1,6 +1,7 @@
 pipeline {
     //agent any
     agent {
+        // Incluimos un contenedor para ejecutar agente
         docker { image 'node:9-alpine' }
     }
     stages {
