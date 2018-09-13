@@ -1,8 +1,7 @@
 pipeline {
     //agent any
-    agent {
-        docker  { image: 'node:9-alpine' }
-    }
+    agent docker{image 'node:9-alpine' }
+    
     stages {
         stage('Prueba Despliegue - Ais ') {
             steps {
