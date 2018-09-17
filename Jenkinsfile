@@ -5,6 +5,8 @@ pipeline {
         docker { image 'jenkinsci/ssh-slave' }
     }
     stages {
+        node ('worker')
+        {
         stage('Prueba Despliegue - Ais ') {
             steps {
                 timeout(time: 1, unit: 'MINUTES') {
@@ -14,6 +16,7 @@ pipeline {
                     sh 'for n in `seq 1 5`; do echo $n; sleep 1; done'
                 }
             }
+        }
         }
     }
 }
